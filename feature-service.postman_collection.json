@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "c6d3ed57-f28b-4793-8dd6-870dd9da113f",
+		"name": "feature-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5602129"
+	},
+	"item": [
+		{
+			"name": "hello-admin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/features/hello-admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"hello-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/features/hello-user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"hello-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add feature",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/features/TEST-FEATURE",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"TEST-FEATURE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get features for user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/features",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enable feature for user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/features/TEST-FEATURE/user/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"TEST-FEATURE",
+						"user",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
